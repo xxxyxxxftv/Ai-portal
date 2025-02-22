@@ -1,37 +1,48 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Приветствие от Дениса Прохорова</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #007BFF;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        .signature {
-            margin-top: 30px;
-            font-style: italic;
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <h1>Хэллоу ребятки!</h1>
-    <p>Привет! Меня зовут Денис Прохоров, и я рад приветствовать вас на этой странице.</p>
-    <p>Здесь вы можете найти полезную информацию или просто насладиться моментом.</p>
-    <div class="signature">
-        С уважением,<br>
-        Денис Прохоров
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { Globe, Cpu, Code } from "lucide-react";
+import "./styles.css";
+
+export default function TechAIPage() {
+  const [topics] = useState([
+    { title: "Искусственный интеллект", icon: Cpu, desc: "ИИ меняет мир, автоматизируя сложные задачи и открывая новые возможности." },
+    { title: "Машинное обучение", icon: Code, desc: "Алгоритмы машинного обучения позволяют системам учиться на данных и делать прогнозы." },
+    { title: "Интернет вещей", icon: Globe, desc: "IoT соединяет устройства и создает умные экосистемы для жизни и работы." }
+  ]);
+
+  return (
+    <div className="container">
+      <motion.h1 
+        className="title"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Современные технологии и Искусственный Интеллект
+      </motion.h1>
+      <div className="grid-container">
+        {topics.map((topic, index) => (
+          <motion.div 
+            key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+          >
+            <Card className="card">
+              <CardContent className="card-content">
+                <topic.icon className="icon" />
+                <h2 className="card-title">{topic.title}</h2>
+                <p className="card-text">{topic.desc}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </div>
+      <Button className="button">
+        Узнать больше
+      </Button>
     </div>
-</body>
-</html>
+  );
+}

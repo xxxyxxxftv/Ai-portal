@@ -1,0 +1,132 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Секции */
+section {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #2575fc;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Новости */
+#news article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#news article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+#news article h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#news article p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Тренды */
+#trends ul {
+    list-style: none;
+    padding: 0;
+}
+
+#trends ul li {
+    background: #f0f4f8;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: #333;
+    transition: background 0.3s ease;
+}
+
+#trends ul li:hover {
+    background: #e0e8f0;
+}
+
+/* О проекте */
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
