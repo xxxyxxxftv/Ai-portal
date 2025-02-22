@@ -159,4 +159,54 @@ footer {
 footer p {
     margin: 0;
     font-size: 1rem;
+}/* Стили для блока "Подписаться на рассылку" */
+#subscribe {
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#subscribe h2 {
+    color: #2575fc;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#subscribe p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+#subscribe form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#subscribe input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 1rem;
+}
+
+#subscribe button {
+    padding: 10px 20px;
+    background: #2575fc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#subscribe button:hover {
+    background: #1a5bbf;
 }
